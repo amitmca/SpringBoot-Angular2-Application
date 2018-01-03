@@ -68,9 +68,6 @@ public class UserDetails {
 	public void setOutfit(String outfit) {
 		this.outfit = outfit;
 	}
-    
-   
-	
 
 	
 }
