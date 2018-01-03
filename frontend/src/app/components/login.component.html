@@ -1,0 +1,28 @@
+<div class="container" >
+            <div class="title">
+              <h2>Login Form</h2>  
+            </div>
+            
+               
+           <form (ngSubmit)="forSubmit()" >  
+               <div class="row">
+                    <div class="input-field col s12">
+                    <label for="username">UserName</label>
+                    <input type="text"  name="username" [(ngModel)]="localUser.username"  class="validate"/>
+                   </div>
+                </div>
+  <br/>
+                <div class="row">
+                    <div class="input-field col s12">
+                    <label for="password">Password</label>
+                    <input type="password"  name="password" [(ngModel)]="localUser.password"  class="validate"/>
+                   </div>
+                </div>
+ <br/>
+                <span>{{errorMsg}}</span>
+               
+                    <button type="submit" class="btn waves-effect waves-light">Login</button>
+                  </form> 
+            
+        </div>
+       

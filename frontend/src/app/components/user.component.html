@@ -1,0 +1,37 @@
+<h1>  Hello {{name}}</h1>
+<p><strong>Email: </strong>{{email}}</p>
+<p><strong>Address:</strong>{{address.street}}  {{address.city}}  {{address.state}}</p>
+
+ <button (click)="toggleInterest()">{{showInterest ? "Hide Interest" : "Show Interest"}}</button>
+<div *ngIf="showInterest">
+<h3>Interest</h3>
+<ul>
+<li *ngFor= "let interest of interests ; let i = index" >
+          {{interest}} <button (click)="deleteInterest(i)" >X</button>
+</li>
+</ul>
+<form (submit)="addInterest(interest.value)">
+<label>Add Your Interest:</label><br/>
+<input type="text" #interest  /><br/>
+</form>
+</div>
+<hr/>
+<h3>Edit Your Information:</h3>
+<form>
+<label>Name:</label><br/>
+<input type="text" name="name" [(ngModel)]="name" /><br/>
+<label>Email:</label><br/>
+<input type="text" name="email" [(ngModel)]="email" /><br/>
+<label>Street:</label><br/>
+<input type="text" name="address.street" [(ngModel)]="address.street" /><br/>
+<label>City:</label><br/>
+<input type="text" name="address.city" [(ngModel)]="address.city" /><br/>
+<label>State:</label><br/>
+<input type="text" name="address.state" [(ngModel)]="address.state" /><br/>
+</form>
+<hr/>
+<hr/>
+ <p><strong>Example Of Sample Data Provided by 
+  <a routerLink="/userInfo">Spring Rest API(GET) .</a></strong></p> 
+
+

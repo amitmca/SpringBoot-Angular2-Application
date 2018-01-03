@@ -1,0 +1,29 @@
+ <h3>[User Sample Data  ]</h3>
+    
+<table class="table table-striped"  >
+    <thead>
+    <tr>
+        <th style="width: 14%"> id</th>
+         <th style="width: 14%"> Name</th>
+         <th style="width: 14%"> ContactInfo</th>
+         <th style="width: 14%"> Profession</th>
+         <th style="width: 14%">interestIn</th>
+         <th style="width: 14%"> Language</th> 
+          <th style="width: 14%"> OutFit</th>        
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let userRecord of userRecords">
+        <td>{{userRecord.id}}</td>
+        <td>{{userRecord.name}}</td>
+         <td>{{userRecord.contactInfo}}</td>
+         <td>{{userRecord.occupation}}</td>
+         <td>{{userRecord.interestIn}}</td>
+         <td>{{userRecord.language}}</td>
+         <td>{{userRecord.outfit}}</td>
+    </tr>
+    </tbody>
+    
+</table>
+
+
